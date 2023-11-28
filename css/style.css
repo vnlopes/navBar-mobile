@@ -1,0 +1,204 @@
+*{
+    padding: 0;
+    margin: 0;
+    box-sizing: border-box;
+}
+
+body{
+    height: 100vh;
+    width: 100vw;
+    background-color: #0f0f0f;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    flex-direction: column-reverse;
+}
+
+
+.navbar{
+    position: absolute;
+    top: -150px;
+    background-color: #131313;
+    height: 150px;
+    width: 100vw;
+    border-bottom-left-radius: 20px;
+    border-bottom-right-radius: 20px;
+    display: none;
+    justify-content: center;
+    align-items: center;
+    transition: 0.5s;
+    box-shadow: 0 1px 5px rgba(0, 0, 0, 0.295);
+}
+
+.main img{
+    height: 35px;
+}
+
+.main{
+    margin-top: 30px;
+    width: 75%;
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+}
+
+.bg-x{
+    position: absolute;
+    z-index: 1;
+    box-shadow: 0 1px 5px rgba(0, 0, 0, 0.295);
+    position: absolute;
+    top: -50px;
+    right: 0;
+    width: 50px;
+    height: 45px;
+    display: none;
+    justify-content: center;
+    align-items: center;
+    border-bottom-left-radius: 50%;
+    border-bottom-right-radius: 50%;
+    background-color: #1b1b1b;
+    transition: 0.8s;
+    cursor: pointer;
+}
+
+.bg-book{
+    background-color: #1b1b1b;
+    height: 55px;
+    width: 55px;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    border-radius: 10px;
+}
+
+.bg-book svg{
+    fill: #5200FF;
+}
+
+.navbar img{
+    cursor: pointer;
+}
+
+.home, .github, .instagram, .linkedin{
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    height: 55px;
+    width: 55px;
+    border-radius: 10px;
+}
+
+.x:active{
+    rotate: 360deg;
+}
+
+.x:not(:active){
+    transition: 0.3s linear;
+}
+
+.home:not(:active), .github:not(:active), .instagram:not(:active), .linkedin:not(:active){
+    transition: 0.3s linear;
+}
+
+.main .home:active, .github:active, .instagram:active, .linkedin:active{
+    background-color: #1b1b1b;
+    transform: scale(0.9);
+}
+
+.bg-book:active{
+    background-color: #1b1b1b91;
+    transform: scale(0.98);
+}
+
+.bg-book:not(:active){
+    transition: 0.3s linear;
+}
+
+/* apagar essa parte dps : */
+
+button {
+    position: relative;
+    padding: 10px 20px;
+    border-radius: 7px;
+    border: 1px solid rgb(61, 106, 255);
+    font-size: 14px;
+    text-transform: uppercase;
+    font-weight: 600;
+    letter-spacing: 2px;
+    background: transparent;
+    color: #fff;
+    overflow: hidden;
+    box-shadow: 0 0 0 0 transparent;
+    -webkit-transition: all 0.2s ease-in;
+    -moz-transition: all 0.2s ease-in;
+    transition: all 0.2s ease-in;
+    margin-top: 60px;
+  }
+  
+  button:hover {
+    background: rgb(61, 106, 255);
+    box-shadow: 0 0 30px 5px rgba(0, 142, 236, 0.815);
+    -webkit-transition: all 0.2s ease-out;
+    -moz-transition: all 0.2s ease-out;
+    transition: all 0.2s ease-out;
+  }
+  
+  button:hover::before {
+    -webkit-animation: sh02 0.5s 0s linear;
+    -moz-animation: sh02 0.5s 0s linear;
+    animation: sh02 0.5s 0s linear;
+  }
+  
+  button::before {
+    content: '';
+    display: block;
+    width: 0px;
+    height: 86%;
+    position: absolute;
+    top: 7%;
+    left: 0%;
+    opacity: 0;
+    background: #fff;
+    box-shadow: 0 0 50px 30px #fff;
+    -webkit-transform: skewX(-20deg);
+    -moz-transform: skewX(-20deg);
+    -ms-transform: skewX(-20deg);
+    -o-transform: skewX(-20deg);
+    transform: skewX(-20deg);
+  }
+  
+
+  /* Aqui está o media query: */
+
+  @keyframes sh02 {
+    from {
+      opacity: 0;
+      left: 0%;
+    }
+  
+    50% {
+      opacity: 1;
+    }
+  
+    to {
+      opacity: 0;
+      left: 100%;
+    }
+  }
+  
+  button:active {
+    box-shadow: 0 0 0 0 transparent;
+    -webkit-transition: box-shadow 0.2s ease-in;
+    -moz-transition: box-shadow 0.2s ease-in;
+    transition: box-shadow 0.2s ease-in;
+  }
+  
+
+@media (max-width: 800px){
+    .navbar{
+        display: flex;
+    }
+    .bg-x{
+        display: flex;
+    }
+}
