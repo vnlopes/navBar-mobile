@@ -88,11 +88,16 @@ body{
     border-radius: 10px;
 }
 
-.x:active{
+.loop{
+    width: 100%;
+    height: 100%;
+}
+
+.loop:active{
     rotate: 360deg;
 }
 
-.x:not(:active){
+.loop:not(:active){
     transition: 0.3s linear;
 }
 
